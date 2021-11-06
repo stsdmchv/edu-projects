@@ -1,0 +1,59 @@
+/**
+ * Body CSS
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+html,
+body,
+input,
+textarea,
+buttons {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+/**
+ * Sidebar CSS
+ */
+
+#sidebar {
+  background-color: #2196F3;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18%;
+    height: 100%;
+    padding-top: 30px;
+  }
+}
+
+
+/**
+ * Content CSS
+ */
+@media (min-width: 768px) {
+  #content {
+    margin-left: 20%;
+  }
+}
+
+.author{
+  font-size: 2rem;
+}
+
+.company{
+  font-size: 1.2rem;
+  line-height: normal;
+}
