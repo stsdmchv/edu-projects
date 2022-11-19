@@ -1,0 +1,211 @@
+@import "vars"
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap')
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	&:focus
+		outline: none
+
+*::-webkit-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*:-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*::-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #000
+body input:required:valid,
+body textarea:required:valid
+	color: #000
+
+html,body
+	height: 100%
+
+body
+	font-size: 16px
+	font-family: $default-font
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	opacity: 1
+
+img
+	max-width: 100%
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+/* btns */
+
+
+
+.btn
+	color: #FFFFFF
+	background-color: $accent
+	padding: 14px 40px
+	transition: all .4s ease
+	text-decoration: none
+	border-radius: 24px
+	box-shadow: 0 3px 6px, rgba(0,0,0,.16)
+	&:hover
+		background-color: #FFF
+		color: #111
+	&.btn_white
+		background-color: #FFFFFF
+		color: #111111
+		&:hover
+			color: #fff
+			background-color: $accent
+
+.btn_simple
+	color: $accent
+	border: 1px solid $accent
+	font-weight: 500
+	padding: 6px 34px
+	transition: all .2s ease
+	text-decoration: none
+	border-radius: 20px
+	&:hover
+		background-color: $accent
+		color: #fff
+
+/* btns */
+
+#header
+	padding-top: 24px
+	.inner_header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		>.logo
+			display: block
+			width: 48px
+			height: 48px
+			>img
+				width: 100%
+		.right_side_header
+			display: flex
+			align-items: center
+			.menu_top
+				list-style-type: none
+				>li
+					display: inline-block
+					margin-right: 40px
+					position: relative
+					a
+						display: block
+						text-decoration: none
+						font-weight: 500
+						color: #000
+						transition: color .4s ease
+						padding: 5px 40px 5px 0
+						&:hover
+							color: $accent
+					>.sub_menu
+						position: absolute
+						top: 35px
+						background-color: #fff
+						box-shadow: 0 3px 6px
+						z-index: 10
+						border-radius: 5px
+						padding: 5px 0
+						animation: .6 opac
+						display: none
+						>li
+							display: block
+							>a
+								padding: 3px 10px
+								font-size: 14px
+					&.has_sub_menu
+						&:hover >.sub_menu
+							display: block
+						&::after
+							display: block
+							content: ''
+							width: 8px
+							height: 4px
+							background-image: url("/img/main_banner/arrow_down.svg")
+							background-size: cover
+							background-repeat: no-repeat
+							background-position: center
+							position: absolute
+							top: 18px
+							right: 25px
+
+@keyframes opac
+	from /// as 0%
+		opacity: 0
+	// or 0%, 10%, 20%, ..., 100%
+	to /// as 100%
+		opacity: 1
+
+
+#top_banner
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.notification
+	border-color: $lightAccent
+	background-color: $lightAccent
+	border-radius: 20px
+	padding: 10px 25px
+	display: flex
+	align-items: center
+	max-width: 275px
+	img
+		width: 16px
+		height: auto
+		margin-right: 7px
+	p
+		color: $accent
+	a
+		margin-left: 7px
+		transition: all .4s ease
+		text-decoration: none
+		border-bottom: 1px solid $accent
+		color: $accent
+		&:hover
+			color: $darkAccent
+			border-color: $darkAccent
+
+.main_banner
+	padding: 240px 0 380px
+	.mc_info
+		>h1
+			color: #160637
+			font-size: 50px
+			font-weight: 900
+			max-width: 450px
+			line-height: 1.1
+			margin-top: 10px
+		>.description
+			color: #8989A2
+			margin: 14px 0 44px
+			font-size: 18px
+		>.btns
+			display: flex
+			align-items: center
+			>.btn_white
+				margin-left: 16px
