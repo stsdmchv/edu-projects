@@ -1,0 +1,25 @@
+public class People {
+    private string name;
+
+    People(name){
+        this.name = name;
+    }
+}
+interface Jump {
+    private integer weight;
+    private integer power;
+    private Object form;
+
+    Jump(weight, power, form);
+}
+
+public class SuperPeople{
+    SuperPeople (weight, power, form){
+        super(name);
+        this.weight = weight;
+    }
+    Jump(){
+
+    }
+
+}
